@@ -4,6 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/SHPE_Website/',
   assetsInclude: ['**/*.pdf', '**/*.docx'],
   resolve: {
     alias: {
