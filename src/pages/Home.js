@@ -1,0 +1,12 @@
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
+import { Hero } from "../components/Hero";
+import { Mission } from "../components/Mission";
+import { Vision } from "../components/Vision";
+import { Values } from "../components/Values";
+import { ExploreMore } from "../components/ExploreMore";
+import { History } from "../components/History";
+import { Contact } from "../components/Contact";
+import { SEOHead } from "../components/SEOHead";
+export function Home() {
+    return (_jsxs(_Fragment, { children: [_jsx(SEOHead, { title: "WashU SHPE - Society of Hispanic Professional Engineers | Home", description: "Welcome to Washington University in St. Louis SHPE. Empowering the Hispanic community in STEM through mentorship, professional development, and community service. Join our familia!", keywords: "SHPE, WashU, Washington University, Hispanic Engineers, STEM, Engineering, St. Louis, Society of Hispanic Professional Engineers, mentorship, professional development" }), _jsx(Hero, {}), _jsx(Mission, {}), _jsx(Vision, {}), _jsx(Values, {}), _jsx(ExploreMore, {}), _jsx(History, {}), _jsx(Contact, {})] }));
+}

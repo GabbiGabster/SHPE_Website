@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Contact } from "../components/Contact";
 import {
   Instagram,
@@ -9,6 +9,15 @@ import {
   Users,
 } from "lucide-react";
 import { SEOHead } from "../components/SEOHead";
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "behold-widget": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & { "feed-id"?: string };
+    }
+  }
+}
 
 export function Members() {
   useEffect(() => {
@@ -97,7 +106,7 @@ export function Members() {
 
             {/* Instagram Feed */}
             <div className="mt-8 bg-white rounded-xl p-4 shadow-md">
-              <behold-widget feed-id="gZukTIlscdP6HZISRbbb"></behold-widget>
+              {React.createElement('behold-widget', { 'feed-id': 'gZukTIlscdP6HZISRbbb' })}
             </div>
           </div>
         </section>
