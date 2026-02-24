@@ -10,20 +10,18 @@ export function History() {
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center mb-8 sm:mb-12">
-          <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 lg:h-96" aria-hidden="true">
-            {/* <ImageWithFallback
-              src="https://images.unsplash.com/photo-1631599143424-5bc234fbebf1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwYnVpbGRpbmd8ZW58MXx8fHwxNzY3NTIxMjkyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Washington University campus"
-              className="w-full h-full object-cover"
-            /> */}
-          </div>
-
+        <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 lg:h-96" aria-hidden="true">
+          <img 
+            src="/images/con2023.jpg"
+            alt="Washington University Activities Fair"
+            className="w-full h-full object-cover"
+            style={{ display: 'block', minHeight: '100%' }}
+          /> 
+        </div>
           <div>
             <p className="text-base sm:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6 sm:mb-8">
-              The Washington University chapter of SHPE has been dedicated to supporting 
-              Hispanic students in STEM for years, creating a strong community of future 
-              engineers, scientists, and innovators. Through mentorship, professional 
-              development, and community service, we continue to grow and empower our members.
+            WashU SHPE was founded in Fall 2016 by Dylan Zubata and Michael Pichardo to support Hispanic students in STEM and build a strong community at WashU.
+            After becoming inactive during the COVID-19 pandemic, the chapter was reestablished in October 2022 through the leadership of Nicole Lucas, who led the effort to re-register with both SHPE National and the university. Today, WashU SHPE continues to grow, grounded in resilience, familia, service, and professional development.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">

@@ -43,18 +43,20 @@ export function ExploreMore() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12" aria-hidden="true">
           <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80">
-            {/* <ImageWithFallback
-              src="https://images.unsplash.com/photo-1755053757912-a63da9d6e0e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMHN0dWRlbnRzJTIwdGVhbXdvcmt8ZW58MXx8fHwxNzY3NTYzOTQ0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Engineering students collaborating"
-              className="w-full h-full object-cover"
-            /> */}
+          <img 
+            src="/images/actFair.png"
+            alt="Washington University Activities Fair"
+            className="w-full h-full object-cover"
+            style={{ display: 'block', minHeight: '100%' }}
+          /> 
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80">
-            {/* <ImageWithFallback
-              src="https://images.unsplash.com/photo-1604487095738-dc3d2ceb65bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaXNwYW5pYyUyMHN0ZW0lMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc2NzU2Mzk0NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="STEM professionals working together"
-              className="w-full h-full object-cover"
-            /> */}
+          <img 
+            src="/images/NDC.png"
+            alt="WashU Noche De Ciencias"
+            className="w-full h-full object-cover"
+            style={{ display: 'block', minHeight: '100%' }}
+          /> 
           </div>
         </div>
 
