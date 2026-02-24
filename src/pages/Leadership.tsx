@@ -1,6 +1,7 @@
 import { Linkedin, Mail } from "lucide-react";
 import { Contact } from "../components/Contact";
 import { SEOHead } from "../components/SEOHead";
+import leadersData from "../data/leaders.json";
 
 interface Leader {
   position: string;
@@ -12,80 +13,7 @@ interface Leader {
 }
 
 export function Leadership() {
-  const leaders: Leader[] = [
-    {
-      position: "President",
-      name: "Diego Gonzalez",
-      major: "Computer Science",
-      image: " https://media.licdn.com/dms/image/v2/D5603AQEIXuz575SluA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1669850168856?e=1769644800&v=beta&t=d--O0F1-i_dSkBw7GxFvtyUru_xYaJhLoyOLSvutiBQ",
-      email: "d.gonzalez@wustl.edu",
-      linkedin: "https://www.linkedin.com/in/diego-gonzalezz/",
-    },
-    {
-      position: "Vice-President",
-      name: "Gabriella Arguello",
-      major: "Computer Science",
-      image: " https://media.licdn.com/dms/image/v2/D4D03AQEbE7FM4PtoKA/profile-displayphoto-scale_400_400/B4DZmGaU.UGwAg-/0/1758896673483?e=1769644800&v=beta&t=Lwnwu1kX9UUqqYfS5F5e3shUVhOxlnzD-AmApcvaxqk",
-      email: "a.gabbi@wustl.edu",
-      linkedin: "https://www.linkedin.com/in/gabbiarguello/",
-    },
-    {
-      position: "External Representative",
-      name: "Miguel Lopez",
-      major: "Mechanical Engineering",
-      image: " https://media.licdn.com/dms/image/v2/D5635AQEeemD7LcbjJw/profile-framedphoto-shrink_400_400/B56Zsi09YdI8Ag-/0/1765815867183?e=1768453200&v=beta&t=j9_vXSDyRJxCPZFeuMBwnlwHQ5DYei2QrBiz0f2Ftt4",
-      email: "lmiguel@wustl.edu",
-      linkedin: "https://www.linkedin.com/in/miguel-lopez100/",
-    },
-    {
-      position: "Internal Representative",
-      name: "Melita Ocampo",
-      major: "Computer Science",
-      image: " https://media.licdn.com/dms/image/v2/D4E03AQHg35eB16fexA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1691697576627?e=1769644800&v=beta&t=eNqqrWDwDh6nMinytDvS6osBYxEzVfGefz54Fa0CJWk",
-      email: "melita@wustl.edu",
-      linkedin: "https://www.linkedin.com/in/melitao/",
-    },
-    {
-      position: "Secretary",
-      name: "Nadia Ahmed",
-      major: "Math + Computer Science",
-      image: "https://media.licdn.com/dms/image/v2/D4E03AQFidqh8NTcwtw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729382664214?e=1769644800&v=beta&t=4gO1FNXvH7UChyFCnLPMAJ_HfkFHZj9OjntlQzkHxyI",
-      email: "ahmed.nadia@wustl.edu",
-      linkedin: "https://www.linkedin.com/in/nadiaahmed06/",
-    },
-    {
-      position: "Treasurer",
-      name: "Anette Martinez Vazquez",
-      major: "Mechanical Engineering",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQHq5-ATvHiT3Q/profile-displayphoto-shrink_400_400/B56Zn47R1rKAAg-/0/1760817913977?e=1769644800&v=beta&t=tQwuphFZbf4qqHwJsL0j_eFGFfmVXpRMxNpIH9SKHMg",
-      email: "email@wustl.edu",
-      linkedin: "https://www.linkedin.com/in/anett-martinez-vazquez/",
-    },
-    {
-      position: "Community Service Chair",
-      name: "Angela Delgado",
-      major: "Mechanical Engineering",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQE2fcNQeQH_cQ/profile-displayphoto-scale_400_400/B56ZsZ8MI4HIAg-/0/1765666767821?e=1769644800&v=beta&t=pM_e-TiN07h3EvY1HpIK8LLxII2F9do2PoboF8ebxo0",
-      email: "a.j.delgado@wustl.edu",
-      linkedin: "https://www.linkedin.com/in/angela-del7/",
-    },
-    {
-      position: "Event Coordinator",
-      name: "Diana Cardenas-Jara",
-      major: "Computer Science + Political Science",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQFyoz0PtudiQA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730318511853?e=1769644800&v=beta&t=zt-p0gqnf2KsKc9qjA7sPF5YlxB1y_ejR7pM9CuDZkg",
-      email: "cardenas-jara@wustl.edu",
-      linkedin: "https://www.linkedin.com/in/diana-cardenas-jara/",
-    },
-    {
-      position: "First Year Representative",
-      name: "Tobias Montilla",
-      major: "Mechanical Engineering",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQG1C85B1sEeOA/profile-displayphoto-scale_400_400/B56Zn9Ucx3I0Ag-/0/1760891621030?e=1769644800&v=beta&t=y_mp5ACjrEwqHfmPE0IpoCgEPryHB2dbROJ0p4KAQ0A",
-      email: "montilla@wustl.edu",
-      linkedin: "https://www.linkedin.com/in/tobiasmontilla",
-    },
-  ];
+  const leaders = leadersData as Leader[];
 
   return (
     <main className="min-h-screen bg-white">

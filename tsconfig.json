@@ -4,6 +4,9 @@
     "module": "ESNext",
     "jsx": "react-jsx",
     "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true, 
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
