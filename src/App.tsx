@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 import { Members } from "./pages/Members";
@@ -10,9 +11,6 @@ export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white">
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
         <Navbar />
         <div id="main-content">
           <Routes>

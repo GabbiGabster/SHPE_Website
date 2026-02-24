@@ -12,7 +12,6 @@ import {
   import { useState, useEffect, useRef } from "react";
   import { Contact } from "../components/Contact";
   import { SEOHead } from "../components/SEOHead";
-  import sponsorshipPackage from "../images/WashU_SHPE_Sponsorship_Package.pdf";
   
   export function Sponsorship() {
     const [showDonateModal, setShowDonateModal] = useState(false);
@@ -342,7 +341,7 @@ import {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a
-                href={sponsorshipPackage}
+                href="/WashU_SHPE_Sponsorship_Package.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg px-6 sm:px-8 py-3 sm:py-4 transition-all hover:scale-105 shadow-lg flex items-center justify-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px]"

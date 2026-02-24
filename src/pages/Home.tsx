@@ -21,7 +21,7 @@ export function Home() {
       <Values />
       <ExploreMore />
       <History />
-      <Contact />
+      <Contact/>
     </>
   );
 }

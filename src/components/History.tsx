@@ -1,6 +1,4 @@
 import { FileText, ExternalLink } from "lucide-react";
-import bylawsPdf from "../images/SHPE-Student-Chapter-Bylaws.pdf";
-import constitutionDoc from "../images/SHPE_Constitution.docx";
 
 export function History() {
   return (
@@ -30,7 +28,7 @@ export function History() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a 
-                href={bylawsPdf}
+                href="/SHPE-Student-Chapter-Bylaws.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-lg px-5 sm:px-6 py-3 sm:py-4 shadow-lg transition-all hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px]"
@@ -42,7 +40,7 @@ export function History() {
                 <ExternalLink className="w-4 h-4 flex-shrink-0" aria-hidden="true" style={{ color: "#FFFFFF" }} />
               </a>
               <a 
-                href={constitutionDoc}
+                href="/SHPE_Constitution.docx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-lg px-5 sm:px-6 py-3 sm:py-4 shadow-lg transition-all hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px]"
