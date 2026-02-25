@@ -1,5 +1,7 @@
 import { FileText, ExternalLink } from "lucide-react";
-import con2023 from '/images/con2023.jpg'
+import con2023 from "/images/con2023.jpg";
+
+const BASE_URL = import.meta.env.BASE_URL;
 
 export function History() {
   return (
@@ -27,7 +29,7 @@ export function History() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a 
-                href="/SHPE-Student-Chapter-Bylaws.pdf"
+                href={`${BASE_URL}SHPE-Student-Chapter-Bylaws.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-lg px-5 sm:px-6 py-3 sm:py-4 shadow-lg transition-all hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px]"
@@ -39,7 +41,7 @@ export function History() {
                 <ExternalLink className="w-4 h-4 flex-shrink-0" aria-hidden="true" style={{ color: "#FFFFFF" }} />
               </a>
               <a 
-                href="/SHPE_Constitution.docx"
+                href={`${BASE_URL}SHPE_Constitution.docx`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-lg px-5 sm:px-6 py-3 sm:py-4 shadow-lg transition-all hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px]"
