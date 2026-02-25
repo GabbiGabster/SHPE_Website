@@ -2,8 +2,8 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import shpeLogo from '/SHPE_logo.png';
 
-const shpeLogo = "/SHPE_logo.png";
 
 export function Navbar() {
   const location = useLocation();

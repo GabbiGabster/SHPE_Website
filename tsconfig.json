@@ -5,8 +5,9 @@
     "jsx": "react-jsx",
     "strict": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true, 
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "ignoreDeprecations": "5.0",
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {

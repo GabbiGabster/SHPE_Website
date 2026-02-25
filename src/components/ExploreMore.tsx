@@ -1,7 +1,8 @@
 import { Heart, Users, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-// import { ImageWithFallback } from "./figma/ImageWithFallback";
+import actFair from '/images/actFair.png'
+import ncd from '/images/NDC.png'
 
 export function ExploreMore() {
   const navigate = useNavigate();
@@ -44,7 +45,7 @@ export function ExploreMore() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12" aria-hidden="true">
           <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80">
           <img 
-            src="/images/actFair.png"
+            src= {actFair}
             alt="Washington University Activities Fair"
             className="w-full h-full object-cover"
             style={{ display: 'block', minHeight: '100%' }}
@@ -52,7 +53,7 @@ export function ExploreMore() {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80">
           <img 
-            src="/images/NDC.png"
+            src= {ncd}
             alt="WashU Noche De Ciencias"
             className="w-full h-full object-cover"
             style={{ display: 'block', minHeight: '100%' }}

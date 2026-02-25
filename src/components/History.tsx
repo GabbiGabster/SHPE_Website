@@ -1,4 +1,5 @@
 import { FileText, ExternalLink } from "lucide-react";
+import con2023 from '/images/con2023.jpg'
 
 export function History() {
   return (
@@ -12,7 +13,7 @@ export function History() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center mb-8 sm:mb-12">
         <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 lg:h-96" aria-hidden="true">
           <img 
-            src="/images/con2023.jpg"
+            src= {con2023}
             alt="Washington University Activities Fair"
             className="w-full h-full object-cover"
             style={{ display: 'block', minHeight: '100%' }}

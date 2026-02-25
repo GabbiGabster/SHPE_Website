@@ -3,7 +3,7 @@
     "position": "President",
     "name": "Diego Gonzalez",
     "major": "Computer Science",
-    "image": "/images/leaders/diego-gonzalez.jpeg",
+    "image": "images/leaders/diego-gonzalez.jpeg",
     "email": "d.gonzalez@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/diego-gonzalezz/"
   },
@@ -11,7 +11,7 @@
     "position": "Vice-President",
     "name": "Gabriella Arguello",
     "major": "Computer Science",
-    "image": "/images/leaders/gabriella-arguello.jpeg",
+    "image": "images/leaders/gabriella-arguello.jpeg",
     "email": "a.gabbi@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/gabbiarguello/"
   },
@@ -19,7 +19,7 @@
     "position": "External Representative",
     "name": "Miguel Lopez",
     "major": "Mechanical Engineering",
-    "image": "/images/leaders/miguel-lopez.jpeg",
+    "image": "images/leaders/miguel-lopez.jpeg",
     "email": "lmiguel@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/miguel-lopez100/"
   },
@@ -27,7 +27,7 @@
     "position": "Internal Representative",
     "name": "Melita Ocampo",
     "major": "Computer Science",
-    "image": "/images/leaders/melita-ocampo.jpeg",
+    "image": "images/leaders/melita-ocampo.jpeg",
     "email": "melita@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/melitao/"
   },
@@ -35,7 +35,7 @@
     "position": "Secretary",
     "name": "Nadia Ahmed",
     "major": "Math + Computer Science",
-    "image": "/images/leaders/nadia-ahmed.jpeg",
+    "image": "images/leaders/nadia-ahmed.jpeg",
     "email": "ahmed.nadia@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/nadiaahmed06/"
   },
@@ -43,7 +43,7 @@
     "position": "Treasurer",
     "name": "Anette Martinez Vazquez",
     "major": "Mechanical Engineering",
-    "image": "/images/leaders/anette-martinez-vazquez.jpeg",
+    "image": "images/leaders/anette-martinez-vazquez.jpeg",
     "email": "email@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/anett-martinez-vazquez/"
   },
@@ -51,7 +51,7 @@
     "position": "Community Service Chair",
     "name": "Angela Delgado",
     "major": "Mechanical Engineering",
-    "image": "/images/leaders/angela-delgado.jpeg",
+    "image": "images/leaders/angela-delgado.jpeg",
     "email": "a.j.delgado@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/angela-del7/"
   },
@@ -59,7 +59,7 @@
     "position": "Event Coordinator",
     "name": "Diana Cardenas-Jara",
     "major": "Computer Science + Political Science",
-    "image": "/images/leaders/diana-cardenas-jara.jpeg",
+    "image": "images/leaders/diana-cardenas-jara.jpeg",
     "email": "cardenas-jara@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/diana-cardenas-jara/"
   },
@@ -67,7 +67,7 @@
     "position": "First Year Representative",
     "name": "Tobias Montilla",
     "major": "Mechanical Engineering",
-    "image": "/images/leaders/tobias-montilla.jpeg",
+    "image": "images/leaders/tobias-montilla.jpeg",
     "email": "montilla@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/tobiasmontilla"
   }
