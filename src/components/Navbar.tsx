@@ -24,7 +24,7 @@ export function Navbar() {
     setIsMenuOpen(false);
     // Run scroll after navigation so it always applies to the new page
     setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }, 0);
   };
 
