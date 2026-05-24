@@ -1,49 +1,131 @@
+# =============================================================
+# netlify.toml — WashU SHPE
+# Handles: SPA routing, security headers, caching, HTTPS
+# =============================================================
+
+# ── Build settings ───────────────────────────────────────────
 [build]
-  command = "npm run build"
-  publish = "dist"
+  command   = "npm run build"
+  publish   = "dist"
 
 [build.environment]
-  # Netlify serves from site root; GitHub Pages uses VITE_BASE_PATH=/SHPE_Website/
-  VITE_BASE_PATH = "/"
+  NODE_VERSION = "20"
 
-# Force HTTPS (Netlify provisions free Let's Encrypt certificates automatically)
-[[redirects]]
-  from = "http://*"
-  to = "https://:splat"
-  status = 301
-  force = true
+# ── Dev server (netlify dev) ──────────────────────────────────
+[dev]
+  command   = "npm run dev"
+  port      = 5173
+  targetPort = 5173
 
-# SPA fallback — must come after forced HTTPS redirect
+# ── SPA catch-all: send every non-asset request to index.html ─
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from   = "/*"
+  to     = "/index.html"
   status = 200
 
+# ── Force HTTPS (Netlify handles the cert automatically) ──────
+[[redirects]]
+  from   = "http://*"
+  to     = "https://:splat"
+  status = 301
+  force  = true
+
+# =============================================================
+# Security & performance headers applied to every response
+# =============================================================
 [[headers]]
   for = "/*"
-  [headers.values]
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-    X-Frame-Options = "SAMEORIGIN"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-site"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://w.behold.so; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self'; connect-src 'self' https://w.behold.so; frame-src https://outlook.office365.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
 
-# Long cache for hashed build assets
+  [headers.values]
+    # ── Transport Security ──────────────────────────────────
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+    # ── Clickjacking protection ─────────────────────────────
+    X-Frame-Options = "DENY"
+
+    # ── MIME sniffing protection ────────────────────────────
+    X-Content-Type-Options = "nosniff"
+
+    # ── Referrer policy ─────────────────────────────────────
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # ── Permissions policy (disable unused browser features) ─
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=()"
+
+    # ── Content Security Policy ─────────────────────────────
+    # Allows:
+    #   - self for scripts/styles (Vite hashed bundles)
+    #   - behold.so widget (Instagram embed)
+    #   - Outlook calendar iframe
+    #   - WashU advancement form (donation link)
+    #   - LinkedIn / Instagram images for og-image
+    #   - Google Fonts (if ever added)
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src  'self' 'unsafe-inline' https://w.behold.so;
+      style-src   'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src    'self' https://fonts.gstatic.com;
+      img-src     'self' data: blob:
+                  https://admissions.washu.edu
+                  https://media.licdn.com
+                  https://instagram.com
+                  https://cdninstagram.com
+                  https://*.cdninstagram.com
+                  https://scontent*.cdninstagram.com
+                  https://behold.so
+                  https://*.behold.so;
+      frame-src   'self'
+                  https://outlook.office365.com
+                  https://wustl.advancementform.com;
+      connect-src 'self'
+                  https://api.behold.so
+                  https://w.behold.so;
+      object-src  'none';
+      base-uri    'self';
+      form-action 'self';
+      upgrade-insecure-requests;
+    """
+
+    # ── CORS: public assets are fine to share ───────────────
+    Access-Control-Allow-Origin = "*"
+
+# ── Long-lived cache for hashed Vite bundles ─────────────────
 [[headers]]
   for = "/assets/*"
+
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache optimized images
+# ── Short cache for HTML (always fresh) ──────────────────────
+[[headers]]
+  for = "/*.html"
+
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ── Medium cache for public images ───────────────────────────
 [[headers]]
   for = "/images/*"
+
   [headers.values]
     Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
 
-# Rate limiting for Netlify Functions (when added). Static SPA has no API routes.
+# ── Medium cache for fonts / PDFs / docs ─────────────────────
+[[headers]]
+  for = "/*.pdf"
+
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.docx"
+
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# =============================================================
+# Netlify Functions — rate limiting already implemented in
+# netlify/functions/health.ts; add future functions here.
+# =============================================================
 [functions]
-  node_bundler = "esbuild"
+  directory = "netlify/functions"

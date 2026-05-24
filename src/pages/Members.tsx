@@ -11,10 +11,12 @@ import {
 import { SEOHead } from "../components/SEOHead";
 
 declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
     interface IntrinsicElements {
-      "behold-widget": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & { "feed-id"?: string };
+      "behold-widget": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      > & { "feed-id"?: string };
     }
   }
 }
@@ -27,17 +29,15 @@ export function Members() {
     if (!section) return;
 
     const loadWidget = () => {
-      const existing = document.querySelector(
-        'script[src="https://w.behold.so/widget.js"]',
-      );
-      if (existing) return;
-
+      if (document.querySelector('script[src="https://w.behold.so/widget.js"]')) return;
       const script = document.createElement("script");
       script.type = "module";
       script.src = "https://w.behold.so/widget.js";
       document.head.appendChild(script);
     };
 
+    // Only load the Behold script when the Instagram section scrolls into view.
+    // rootMargin="400px" starts the fetch 400 px before it's visible.
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -45,7 +45,7 @@ export function Members() {
           observer.disconnect();
         }
       },
-      { rootMargin: "200px" },
+      { rootMargin: "400px" },
     );
 
     observer.observe(section);
@@ -63,7 +63,7 @@ export function Members() {
         {/* Header */}
         <header className="text-center mb-12 sm:mb-16 px-2">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4 text-[#1B365D] leading-tight">
-            Members & Events
+            Members &amp; Events
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto">
             Stay connected with the SHPE familia! Check out our upcoming events,
@@ -97,8 +97,12 @@ export function Members() {
           </div>
         </section>
 
-        {/* Instagram Section */}
-        <section ref={instagramRef} className="mb-12 sm:mb-20" aria-labelledby="instagram-heading">
+        {/* Instagram Section — widget loaded lazily */}
+        <section
+          ref={instagramRef}
+          className="mb-12 sm:mb-20"
+          aria-labelledby="instagram-heading"
+        >
           <div className="bg-[#FEF2EE] rounded-2xl p-6 sm:p-8 md:p-12">
             <div className="text-center mb-6 sm:mb-8">
               <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white mb-3 sm:mb-4 shadow-lg">
@@ -108,8 +112,8 @@ export function Members() {
                 Follow Our Journey
               </h2>
               <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 max-w-2xl mx-auto px-2">
-                See what we're up to! Follow us on Instagram to stay connected with our
-                community, see event highlights, and get behind-the-scenes content.
+                See what we're up to! Follow us on Instagram to stay connected with
+                our community, see event highlights, and get behind-the-scenes content.
               </p>
               <a
                 href="https://www.instagram.com/washushpe/"
@@ -119,15 +123,22 @@ export function Members() {
                 style={{ backgroundColor: "#E84E1B", color: "#FFFFFF" }}
                 aria-label="Follow @washushpe on Instagram (opens in new window)"
               >
-                <Instagram className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" style={{ color: "#FFFFFF" }} />
+                <Instagram
+                  className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
+                  aria-hidden="true"
+                  style={{ color: "#FFFFFF" }}
+                />
                 <span>Follow @washushpe</span>
-                <ExternalLink className="w-4 h-4 flex-shrink-0" aria-hidden="true" style={{ color: "#FFFFFF" }} />
+                <ExternalLink
+                  className="w-4 h-4 flex-shrink-0"
+                  aria-hidden="true"
+                  style={{ color: "#FFFFFF" }}
+                />
               </a>
             </div>
 
-            {/* Instagram Feed */}
             <div className="mt-8 bg-white rounded-xl p-4 shadow-md">
-              {React.createElement('behold-widget', { 'feed-id': 'gZukTIlscdP6HZISRbbb' })}
+              {React.createElement("behold-widget", { "feed-id": "gZukTIlscdP6HZISRbbb" })}
             </div>
           </div>
         </section>
@@ -139,12 +150,12 @@ export function Members() {
               Get Plugged In
             </h2>
             <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
-              Stay connected with the WashU SHPE community across all our platforms. 
+              Stay connected with the WashU SHPE community across all our platforms.
               Join the conversation, get updates, and be part of our familia!
             </p>
-            
-            {/* Platform Cards */}
+
             <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-8">
+              {/* WUGO */}
               <div className="bg-white rounded-xl shadow-md p-5 sm:p-6 border-2 border-[#E42217] hover:shadow-lg transition-all">
                 <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
                   <div className="p-3 sm:p-4 rounded-xl bg-[#FEF2EE] flex-shrink-0">
@@ -153,7 +164,8 @@ export function Members() {
                   <div className="flex-1 text-left">
                     <h3 className="text-xl sm:text-2xl mb-2 text-[#1B365D]">Join Our Club on WUGO</h3>
                     <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
-                      Become an official member of SHPE WashU through the WUGO portal and gain access to exclusive resources and events.
+                      Become an official member of SHPE WashU through the WUGO portal and
+                      gain access to exclusive resources and events.
                     </p>
                     <a
                       href="https://wustl.presence.io/organization/society-of-hispanic-professional-engineers"
@@ -170,6 +182,7 @@ export function Members() {
                 </div>
               </div>
 
+              {/* Slack */}
               <div className="bg-white rounded-xl shadow-md p-5 sm:p-6 border-2 border-[#E84E1B] hover:shadow-lg transition-all">
                 <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
                   <div className="p-3 sm:p-4 rounded-xl bg-[#FEF2EE] flex-shrink-0">
@@ -195,6 +208,7 @@ export function Members() {
                 </div>
               </div>
 
+              {/* LinkedIn */}
               <div className="bg-white rounded-xl shadow-md p-5 sm:p-6 border-2 border-[#5B9BD5] hover:shadow-lg transition-all">
                 <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
                   <div className="p-3 sm:p-4 rounded-xl bg-[#E8F4F8] flex-shrink-0">
@@ -203,7 +217,8 @@ export function Members() {
                   <div className="flex-1 text-left">
                     <h3 className="text-xl sm:text-2xl mb-2 text-[#1B365D]">Follow Us on LinkedIn</h3>
                     <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
-                      Stay updated on professional development opportunities, job postings, and connect with our alumni network.
+                      Stay updated on professional development opportunities, job postings, and
+                      connect with our alumni network.
                     </p>
                     <a
                       href="https://www.linkedin.com/company/washu-society-of-hispanic-professional-engineers/posts/?feedView=all"
@@ -220,6 +235,7 @@ export function Members() {
                 </div>
               </div>
 
+              {/* Instagram */}
               <div className="bg-white rounded-xl shadow-md p-5 sm:p-6 border-2 border-[#1B365D] hover:shadow-lg transition-all">
                 <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
                   <div className="p-3 sm:p-4 rounded-xl bg-[#E8ECF2] flex-shrink-0">
@@ -228,7 +244,8 @@ export function Members() {
                   <div className="flex-1 text-left">
                     <h3 className="text-xl sm:text-2xl mb-2 text-[#1B365D]">Follow Us on Instagram</h3>
                     <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
-                      See what we're up to! Follow our Instagram for event photos, stories, and behind-the-scenes content.
+                      See what we're up to! Follow our Instagram for event photos, stories,
+                      and behind-the-scenes content.
                     </p>
                     <a
                       href="https://www.instagram.com/washushpe/"
