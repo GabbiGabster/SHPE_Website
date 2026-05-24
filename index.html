@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,6 +12,64 @@
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+ -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── Favicon ────────────────────────────────────────────────────── -->
+    <link rel="icon" type="image/png" href="/SHPE_Website/SHPE_logo.png" />
+
+    <!-- ── Default title (overridden per-page by SEOHead) ────────────── -->
+    <title>WashU SHPE — Society of Hispanic Professional Engineers</title>
+    <meta
+      name="description"
+      content="Washington University in St. Louis SHPE chapter. Empowering the Hispanic community in STEM."
+    />
+
+    <!-- ── Preconnect to origins fetched early ───────────────────────── -->
+    <link rel="preconnect" href="https://w.behold.so" />
+    <link rel="preconnect" href="https://admissions.washu.edu" />
+
+    <!--
+      ── GitHub Pages SPA redirect receiver ────────────────────────────
+      Pairs with public/404.html.
+
+      When a user visits a deep link (e.g. /SHPE_Website/leadership),
+      GitHub Pages can't find that file and serves 404.html instead.
+      404.html rewrites the URL into /?p=/leadership&... and redirects
+      to index.html. This script reads that ?p= param and calls
+      history.replaceState() to restore the original URL *before* React
+      mounts, so React Router sees /leadership and renders the right page.
+    ──────────────────────────────────────────────────────────────────── -->
+    <script>
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) { return s.replace(/~and~/g, "&"); });
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) +
+              decoded[0] +
+              (decoded[1] ? "?" + decoded[1] : "") +
+              l.hash
+          );
+        }
+      })(window.location);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Vite replaces this with the hashed bundle at build time -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
