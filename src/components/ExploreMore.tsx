@@ -1,8 +1,10 @@
 import { Heart, Users, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import React from "react";
-import actFair from '/images/actFair.png'
-import ncd from '/images/NDC.png'
+import { OptimizedPicture } from "./OptimizedPicture";
+import actFairWebp from "/images/actFair.webp";
+import actFair from "/images/actFair.png";
+import ndcWebp from "/images/NDC.webp";
+import ndc from "/images/NDC.png";
 
 export function ExploreMore() {
   const navigate = useNavigate();
@@ -44,20 +46,22 @@ export function ExploreMore() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12" aria-hidden="true">
           <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80">
-          <img 
-            src= {actFair}
-            alt="Washington University Activities Fair"
-            className="w-full h-full object-cover"
-            style={{ display: 'block', minHeight: '100%' }}
-          /> 
+            <OptimizedPicture
+              webp={actFairWebp}
+              fallback={actFair}
+              alt="Washington University Activities Fair"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80">
-          <img 
-            src= {ncd}
-            alt="WashU Noche De Ciencias"
-            className="w-full h-full object-cover"
-            style={{ display: 'block', minHeight: '100%' }}
-          /> 
+            <OptimizedPicture
+              webp={ndcWebp}
+              fallback={ndc}
+              alt="WashU Noche De Ciencias"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
 

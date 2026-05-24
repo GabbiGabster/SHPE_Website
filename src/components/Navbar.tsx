@@ -40,7 +40,7 @@ export function Navbar() {
             style={{ textDecoration: 'none' }}
           >
             <div style={{ padding: '4px', borderRadius: '4px' }}>
-              <img src={shpeLogo} alt="SHPE Logo" className="h-10 sm:h-12 w-auto" />
+              <img src={shpeLogo} alt="SHPE Logo" className="h-10 sm:h-12 w-auto" fetchPriority="high" decoding="async" width={48} height={48} />
             </div>
           </Link>
 

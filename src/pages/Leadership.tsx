@@ -1,6 +1,7 @@
 import { Linkedin, Mail } from "lucide-react";
 import { Contact } from "../components/Contact";
 import { SEOHead } from "../components/SEOHead";
+import { assetUrl } from "../lib/assets";
 import leadersData from "../data/leaders.json";
 
 interface Leader {
@@ -14,9 +15,6 @@ interface Leader {
 
 export function Leadership() {
   const leaders = leadersData as Leader[];
-
-  const getImageUrl = (image?: string) =>
-    image ? `${import.meta.env.BASE_URL}${image.replace(/^\//, "")}` : undefined;
 
   return (
     <main className="min-h-screen bg-white">
@@ -50,9 +48,11 @@ export function Leadership() {
                 <div className="w-full h-56 sm:h-64 bg-gradient-to-br from-[#1B365D] to-[#5B9BD5] flex items-center justify-center overflow-hidden">
                   {leader.image ? (
                     <img
-                      src={getImageUrl(leader.image)}
+                      src={assetUrl(leader.image)}
                       alt={`${leader.name}, ${leader.position}`}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="text-white text-5xl sm:text-6xl font-bold">

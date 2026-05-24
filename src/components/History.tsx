@@ -1,7 +1,8 @@
 import { FileText, ExternalLink } from "lucide-react";
+import { OptimizedPicture } from "./OptimizedPicture";
+import { assetUrl } from "../lib/assets";
+import con2023Webp from "/images/con2023.webp";
 import con2023 from "/images/con2023.jpg";
-
-const BASE_URL = import.meta.env.BASE_URL;
 
 export function History() {
   return (
@@ -13,14 +14,15 @@ export function History() {
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center mb-8 sm:mb-12">
-        <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 lg:h-96" aria-hidden="true">
-          <img 
-            src= {con2023}
-            alt="Washington University Activities Fair"
-            className="w-full h-full object-cover"
-            style={{ display: 'block', minHeight: '100%' }}
-          /> 
-        </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 lg:h-96" aria-hidden="true">
+            <OptimizedPicture
+              webp={con2023Webp}
+              fallback={con2023}
+              alt="SHPE National Convention 2023"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
           <div>
             <p className="text-base sm:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6 sm:mb-8">
             WashU SHPE was founded in Fall 2016 by Dylan Zubata and Michael Pichardo to support Hispanic students in STEM and build a strong community at WashU.
@@ -29,7 +31,7 @@ export function History() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a 
-                href={`${BASE_URL}SHPE-Student-Chapter-Bylaws.pdf`}
+                href={assetUrl("SHPE-Student-Chapter-Bylaws.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-lg px-5 sm:px-6 py-3 sm:py-4 shadow-lg transition-all hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px]"
@@ -41,7 +43,7 @@ export function History() {
                 <ExternalLink className="w-4 h-4 flex-shrink-0" aria-hidden="true" style={{ color: "#FFFFFF" }} />
               </a>
               <a 
-                href={`${BASE_URL}SHPE_Constitution.docx`}
+                href={assetUrl("SHPE_Constitution.docx")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-lg px-5 sm:px-6 py-3 sm:py-4 shadow-lg transition-all hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px]"

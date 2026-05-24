@@ -2,7 +2,48 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  # Netlify serves from site root; GitHub Pages uses VITE_BASE_PATH=/SHPE_Website/
+  VITE_BASE_PATH = "/"
+
+# Force HTTPS (Netlify provisions free Let's Encrypt certificates automatically)
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
+
+# SPA fallback — must come after forced HTTPS redirect
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-site"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://w.behold.so; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self'; connect-src 'self' https://w.behold.so; frame-src https://outlook.office365.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+
+# Long cache for hashed build assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache optimized images
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+# Rate limiting for Netlify Functions (when added). Static SPA has no API routes.
+[functions]
+  node_bundler = "esbuild"

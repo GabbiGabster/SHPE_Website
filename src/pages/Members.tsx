@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Contact } from "../components/Contact";
 import {
   Instagram,
@@ -20,16 +20,36 @@ declare global {
 }
 
 export function Members() {
-  useEffect(() => {
-    const existing = document.querySelector(
-      'script[src="https://w.behold.so/widget.js"]',
-    );
-    if (existing) return;
+  const instagramRef = useRef<HTMLElement>(null);
 
-    const script = document.createElement("script");
-    script.type = "module";
-    script.src = "https://w.behold.so/widget.js";
-    document.head.appendChild(script);
+  useEffect(() => {
+    const section = instagramRef.current;
+    if (!section) return;
+
+    const loadWidget = () => {
+      const existing = document.querySelector(
+        'script[src="https://w.behold.so/widget.js"]',
+      );
+      if (existing) return;
+
+      const script = document.createElement("script");
+      script.type = "module";
+      script.src = "https://w.behold.so/widget.js";
+      document.head.appendChild(script);
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          loadWidget();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -71,13 +91,14 @@ export function Members() {
                 className="w-full h-full border-0"
                 title="SHPE Events Calendar"
                 aria-label="SHPE Events Calendar - View upcoming events"
+                loading="lazy"
               />
             </div>
           </div>
         </section>
 
         {/* Instagram Section */}
-        <section className="mb-12 sm:mb-20" aria-labelledby="instagram-heading">
+        <section ref={instagramRef} className="mb-12 sm:mb-20" aria-labelledby="instagram-heading">
           <div className="bg-[#FEF2EE] rounded-2xl p-6 sm:p-8 md:p-12">
             <div className="text-center mb-6 sm:mb-8">
               <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white mb-3 sm:mb-4 shadow-lg">
