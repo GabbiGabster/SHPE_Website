@@ -17,7 +17,7 @@ export function Contact() {
     {
       icon: Link2,
       name: "Linktree",
-      url: "#",
+      url: "https://linktr.ee/shpewashu?utm_source=linktree_profile_share&ltsid=7314bf18-c8bf-4ad2-bd9d-dc8bd91709cc",
       color: "#417DC1"
     }
   ];
