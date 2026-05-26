@@ -19,24 +19,23 @@ export function Home() {
         keywords="SHPE, WashU, Washington University, Hispanic Engineers, STEM, Engineering, St. Louis, Society of Hispanic Professional Engineers, mentorship, professional development"
       />
       <Hero />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center mb-8 sm:mb-12">
-        <div className="pt-12 ps-12 flex flex-col gap-5 w-full lg:w-1/2">
-          <Mission />
-          <Vision />
-        </div>
-        <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 w-full max-w-xl">
-            <OptimizedPicture
-              webp={conImgWebp}
-              fallback={conImg}
-              alt="WashU Noche De Ciencias"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center mb-8 sm:mb-12 px-6 sm:px-12">
+      <div className="flex flex-col gap-5">
+        <Mission />
+        <Vision />
       </div>
+      <div className="flex justify-center">
+        <div className="rounded-2xl overflow-hidden shadow-lg h-64 sm:h-80 w-full max-w-xl">
+          <OptimizedPicture
+            webp={conImgWebp}
+            fallback={conImg}
+            alt="National Convention 2025"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
       <Values />
       <ExploreMore />
       <History />

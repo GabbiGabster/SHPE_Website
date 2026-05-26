@@ -78,7 +78,7 @@ import {
         title: "National Membership",
         description:
           "Provides one student with SHPE national membership benefits",
-        color: "#001F5B",
+        color: "#5B9BD5",
       },
       {
         amount: "$25",
@@ -87,7 +87,7 @@ import {
         title: "Conference Meal",
         description:
           "Covers one meal for a student during the SHPE Conference",
-        color: "#72A9BE",
+        color: "#1B365D",
       },
       {
         amount: "$100",
@@ -96,7 +96,7 @@ import {
         title: "On-Campus Workshop",
         description:
           "Funds an on-campus workshop like elevator pitch training or resume reviews — essential for conference readiness",
-        color: "#0070C0",
+        color: "#E84E1B",
       },
       {
         amount: "$180",
@@ -105,7 +105,7 @@ import {
         title: "Conference Lodging",
         description:
           "Covers one night of lodging at the conference — safe, accessible housing so students can fully engage",
-        color: "#FD652F",
+        color: "#5B9BD5",
       },
       {
         amount: "$250",
@@ -114,7 +114,7 @@ import {
         title: "Travel to Convention",
         description:
           "Helps a student get to the SHPE National Convention — because talent shouldn't be limited by travel costs",
-        color: "#D33A02",
+        color: "#1B365D",
       },
       {
         amount: "$345",
@@ -123,7 +123,7 @@ import {
         title: "Full Convention Access",
         description:
           "Covers one student's full SHPE National Convention registration — unlocking access to networking, workshops, and career opportunities",
-        color: "#FFA017",
+        color: "#E84E1B",
       },
     ];
   
@@ -133,7 +133,7 @@ import {
         nameEnglish: "(Superhero)",
         price: "$250",
         icon: "S",
-        color: "#E84E1B",
+        color: "#0070C0",
         benefits: [
           "Announced as sponsor in our newsletter",
           "Invitation to SHPE WashU events",
@@ -144,7 +144,7 @@ import {
         nameEnglish: "(Kin)",
         price: "$500",
         icon: "H",
-        color: "#E84E1B",
+        color: "#FD652F",
         benefits: [
           "Announced as sponsor in our newsletter",
           "Invitation to SHPE WashU events",
@@ -156,7 +156,7 @@ import {
         nameEnglish: "(Godparents)",
         price: "$1000",
         icon: "P",
-        color: "#E84E1B",
+        color: "#D33A02",
         benefits: [
           "Announced as a sponsor in our events and newsletter",
           "Accessibility to SHPE member resumes",
@@ -169,7 +169,7 @@ import {
         nameEnglish: "(Stars)",
         price: "$1500",
         icon: "E",
-        color: "#F5A623",
+        color: "#FFA017",
         benefits: [
           "Announced as an investor in all events, newsletters, and social media",
           "Accessibility to SHPE member resumes",
