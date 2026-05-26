@@ -21,7 +21,7 @@ export function Home() {
       <Hero />
       <div className="flex flex-col lg:flex-row items-center gap-8">
   
-        <div className="flex flex-col pt-4 py-4 gap-5 w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 flex justify-center">
           <Mission />
           <Vision />
         </div>
