@@ -11,8 +11,8 @@ export function GetPluggedIn() {
       description: "Connect with members, get real-time updates, and participate in discussions. Our Slack workspace is where the SHPE familia stays connected!",
       action: "Join Workspace",
       url: "https://shpeexecboard.slack.com/join/shared_invite/zt-3mthk5cja-6KJtvK~Oh6w6yeNPPYGg7w#/shared-invite/email",
-      color: "#E84E1B",
-      bgColor: "#FEF2EE"
+      color: "#D33A02",
+      bgColor: "#D33A02"
     },
     {
       icon: Linkedin,
@@ -22,7 +22,7 @@ export function GetPluggedIn() {
       action: "Follow on LinkedIn",
       url: "https://www.linkedin.com/company/washu-society-of-hispanic-professional-engineers/posts/?feedView=all",
       color: "#5B9BD5",
-      bgColor: "#E8F4F8"
+      bgColor: "#5B9BD5"
     },
     {
       icon: Instagram,
@@ -31,9 +31,9 @@ export function GetPluggedIn() {
       description: "See what we're up to! Follow our Instagram for event photos, stories, and behind-the-scenes content from the SHPE familia.",
       action: "Follow on Instagram",
       url: "https://www.instagram.com/washushpe/",
-      color: "#0070C0",
-      bgColor: "#E8ECF2"
-    }
+      color: "#FD652F",
+      bgColor: "#FD652F"
+    },
     {
       icon: Globe,
       name: "WUGO",
@@ -42,8 +42,8 @@ export function GetPluggedIn() {
       action: "Open WUGO",
       url: "https://wustl.presence.io/organization/society-of-hispanic-professional-engineers",
       color: "#1B365D",
-      bgColor: "#E8ECF2"
-    },
+      bgColor: "#1B365D"
+    }
   ];
 
   return (
