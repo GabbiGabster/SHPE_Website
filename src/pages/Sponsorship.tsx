@@ -78,7 +78,7 @@ import {
         title: "National Membership",
         description:
           "Provides one student with SHPE national membership benefits",
-        color: "#5B9BD5",
+        color: "#001F5B",
       },
       {
         amount: "$25",
@@ -87,7 +87,7 @@ import {
         title: "Conference Meal",
         description:
           "Covers one meal for a student during the SHPE Conference",
-        color: "#1B365D",
+        color: "#72A9BE",
       },
       {
         amount: "$100",
@@ -96,7 +96,7 @@ import {
         title: "On-Campus Workshop",
         description:
           "Funds an on-campus workshop like elevator pitch training or resume reviews — essential for conference readiness",
-        color: "#E84E1B",
+        color: "#0070C0",
       },
       {
         amount: "$180",
@@ -105,7 +105,7 @@ import {
         title: "Conference Lodging",
         description:
           "Covers one night of lodging at the conference — safe, accessible housing so students can fully engage",
-        color: "#5B9BD5",
+        color: "#FD652F",
       },
       {
         amount: "$250",
@@ -114,7 +114,7 @@ import {
         title: "Travel to Convention",
         description:
           "Helps a student get to the SHPE National Convention — because talent shouldn't be limited by travel costs",
-        color: "#1B365D",
+        color: "#D33A02",
       },
       {
         amount: "$345",
@@ -123,7 +123,7 @@ import {
         title: "Full Convention Access",
         description:
           "Covers one student's full SHPE National Convention registration — unlocking access to networking, workshops, and career opportunities",
-        color: "#E84E1B",
+        color: "#FFA017",
       },
     ];
   

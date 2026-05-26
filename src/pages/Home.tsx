@@ -19,8 +19,7 @@ export function Home() {
         keywords="SHPE, WashU, Washington University, Hispanic Engineers, STEM, Engineering, St. Louis, Society of Hispanic Professional Engineers, mentorship, professional development"
       />
       <Hero />
-      <div className="flex flex-col lg:flex-row items-center gap-8">
-  
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center mb-8 sm:mb-12">
         <div className="pt-12 ps-12 flex flex-col gap-5 w-full lg:w-1/2">
           <Mission />
           <Vision />
