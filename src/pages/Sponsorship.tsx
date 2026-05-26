@@ -134,7 +134,7 @@ import {
         nameEnglish: "(Superhero)",
         price: "$250",
         icon: "S",
-        color: "#001F5B",
+      color: "#0070C0",
         benefits: [
           "Announced as sponsor in our newsletter",
           "Invitation to SHPE WashU events",
@@ -145,7 +145,7 @@ import {
         nameEnglish: "(Kin)",
         price: "$500",
         icon: "H",
-        color: "#001F5B",
+      color: "#FD652F",
         benefits: [
           "Announced as sponsor in our newsletter",
           "Invitation to SHPE WashU events",
@@ -157,7 +157,7 @@ import {
         nameEnglish: "(Godparents)",
         price: "$1000",
         icon: "P",
-        color: "#001F5B",
+      color: "#D33A02",
         benefits: [
           "Announced as a sponsor in our events and newsletter",
           "Accessibility to SHPE member resumes",
@@ -289,12 +289,7 @@ import {
                       <div>
                         <h3
                           className="text-xl sm:text-2xl"
-                          style={{
-                            color:
-                              tier.color === "#F5A623"
-                                ? "#F5A623"
-                                : "#1B365D",
-                          }}
+                          style={{ color: "#001F5B" }}
                         >
                           {tier.name} {tier.nameEnglish}
                         </h3>

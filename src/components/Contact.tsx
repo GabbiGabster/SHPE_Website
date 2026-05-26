@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Mail, Instagram, Linkedin, Link2 } from "lucide-react";
 
 export function Contact() {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState<"" | "error">("");
+
   const socialLinks = [
     {
       icon: Instagram,
@@ -42,16 +46,58 @@ export function Contact() {
               <span className="break-all sm:break-normal">shpe@wustl.edu</span>
             </a>
 
-            <a
-              href={`mailto:shpe@wustl.edu?subject=${encodeURIComponent("Newsletter signup")}&body=${encodeURIComponent("Hi WashU SHPE,\n\nPlease add me to the newsletter.\n\nName:\nPreferred email:\n\nThank you!")}`}
-              className="inline-flex items-center justify-center gap-2 sm:gap-3 rounded-lg px-6 sm:px-8 py-3 sm:py-4 transition-all hover:scale-105 shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px] w-full sm:w-auto bg-white"
-              style={{ color: "#1B365D" }}
-              aria-label="Email us to subscribe to the newsletter"
+            <form
+              className="w-full sm:w-auto flex flex-col sm:flex-row items-center gap-2 sm:gap-3"
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (!newsletterEmail.trim()) {
+                  setNewsletterStatus("error");
+                  return;
+                }
+                const email = newsletterEmail.trim();
+                const subject = `Member wants to join newsletter - ${email}`;
+                const body = `To whom this may concern, I'm interested in following the WashU SHPE newsletter to keep up with events, members, job opportunities, and resources! Here is my email: ${email}. Have a great day!`;
+                window.location.href = `mailto:shpe@wustl.edu?subject=${encodeURIComponent(
+                  subject
+                )}&body=${encodeURIComponent(body)}`;
+              }}
+              aria-label="Subscribe to the WashU SHPE newsletter"
             >
-              <Mail className="w-5 h-5 flex-shrink-0" aria-hidden="true" style={{ color: "#1B365D" }} />
-              <span>Subscribe to Newsletter</span>
-            </a>
+              <label htmlFor="newsletter-email" className="sr-only">
+                Email address
+              </label>
+              <input
+                id="newsletter-email"
+                type="email"
+                required
+                autoComplete="email"
+                value={newsletterEmail}
+                onChange={(e) => {
+                  setNewsletterEmail(e.target.value);
+                  if (newsletterStatus) setNewsletterStatus("");
+                }}
+                placeholder="Your email address"
+                aria-describedby="newsletter-status"
+                className="w-full sm:w-64 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-[#1B365D] placeholder:text-gray-400 border border-white/60 bg-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[var(--color-primary-blue)]"
+              />
+              <button
+                type="submit"
+                className="inline-flex items-center justify-center gap-2 sm:gap-3 rounded-lg px-5 sm:px-6 py-2.5 sm:py-3 transition-all hover:scale-105 shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px] w-full sm:w-auto"
+                style={{ backgroundColor: "#0070C0", color: "#FFFFFF" }}
+              >
+                <Mail className="w-5 h-5 flex-shrink-0" aria-hidden="true" style={{ color: "#FFFFFF" }} />
+                <span>Subscribe to Newsletter</span>
+              </button>
+            </form>
           </div>
+
+          <p id="newsletter-status" className="mt-3 text-sm sm:text-base" aria-live="polite">
+            {newsletterStatus === "error" && (
+              <span className="text-red-200">
+                Please enter a valid email before subscribing.
+              </span>
+            )}
+          </p>
         </div>
 
         <nav className="flex justify-center items-center gap-3 sm:gap-4 mb-6 sm:mb-8" aria-label="Social media links">

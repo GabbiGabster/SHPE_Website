@@ -11,18 +11,8 @@ export function GetPluggedIn() {
             description: "Connect with members, get real-time updates, and participate in discussions. Our Slack workspace is where the SHPE familia stays connected!",
             action: "Join Workspace",
             url: "https://shpeexecboard.slack.com/join/shared_invite/zt-3mthk5cja-6KJtvK~Oh6w6yeNPPYGg7w#/shared-invite/email",
-            color: "#E84E1B",
+            color: "#D33A02",
             bgColor: "#FEF2EE"
-        },
-        {
-            icon: Globe,
-            name: "WUGO",
-            title: "Find Us on WUGO",
-            description: "See our official WashU student organization listing, upcoming involvement info, and ways to get connected through campus channels.",
-            action: "Open WUGO",
-            url: "https://wugo.wustl.edu/",
-            color: "#1B365D",
-            bgColor: "#E8ECF2"
         },
         {
             icon: Linkedin,
@@ -31,7 +21,7 @@ export function GetPluggedIn() {
             description: "Stay updated on professional development opportunities, job postings, and connect with our alumni network on LinkedIn.",
             action: "Follow on LinkedIn",
             url: "https://www.linkedin.com/company/washu-society-of-hispanic-professional-engineers/posts/?feedView=all",
-            color: "#5B9BD5",
+            color: "#0070C0",
             bgColor: "#E8F4F8"
         },
         {
@@ -41,7 +31,17 @@ export function GetPluggedIn() {
             description: "See what we're up to! Follow our Instagram for event photos, stories, and behind-the-scenes content from the SHPE familia.",
             action: "Follow on Instagram",
             url: "https://www.instagram.com/washushpe/",
-            color: "#1B365D",
+            color: "#FD652F",
+            bgColor: "#FEF2EE"
+        },
+        {
+            icon: Globe,
+            name: "WUGO",
+            title: "Find Us on WUGO",
+            description: "See our official WashU student organization listing on WUGO and register to become a member",
+            action: "Open WUGO",
+            url: "https://wustl.presence.io/organization/society-of-hispanic-professional-engineers",
+            color: "#001F5B",
             bgColor: "#E8ECF2"
         }
     ];
