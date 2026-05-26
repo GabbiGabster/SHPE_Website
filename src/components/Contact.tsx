@@ -31,15 +31,27 @@ export function Contact() {
             Have questions? We'd love to hear from you!
           </p>
 
-          <a 
-            href="mailto:shpe@wustl.edu"
-            className="inline-flex items-center gap-2 sm:gap-3 rounded-lg px-6 sm:px-8 py-3 sm:py-4 transition-all hover:scale-105 shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px]"
-            style={{ backgroundColor: "#E84E1B", color: "#FFFFFF" }}
-            aria-label="Send email to shpe@wustl.edu"
-          >
-            <Mail className="w-5 h-5 flex-shrink-0" aria-hidden="true" style={{ color: "#FFFFFF" }} />
-            <span className="break-all sm:break-normal">shpe@wustl.edu</span>
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <a 
+              href="mailto:shpe@wustl.edu"
+              className="inline-flex items-center justify-center gap-2 sm:gap-3 rounded-lg px-6 sm:px-8 py-3 sm:py-4 transition-all hover:scale-105 shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px] w-full sm:w-auto"
+              style={{ backgroundColor: "#E84E1B", color: "#FFFFFF" }}
+              aria-label="Send email to shpe@wustl.edu"
+            >
+              <Mail className="w-5 h-5 flex-shrink-0" aria-hidden="true" style={{ color: "#FFFFFF" }} />
+              <span className="break-all sm:break-normal">shpe@wustl.edu</span>
+            </a>
+
+            <a
+              href={`mailto:shpe@wustl.edu?subject=${encodeURIComponent("Newsletter signup")}&body=${encodeURIComponent("Hi WashU SHPE,\n\nPlease add me to the newsletter.\n\nName:\nPreferred email:\n\nThank you!")}`}
+              className="inline-flex items-center justify-center gap-2 sm:gap-3 rounded-lg px-6 sm:px-8 py-3 sm:py-4 transition-all hover:scale-105 shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px] w-full sm:w-auto bg-white"
+              style={{ color: "#1B365D" }}
+              aria-label="Email us to subscribe to the newsletter"
+            >
+              <Mail className="w-5 h-5 flex-shrink-0" aria-hidden="true" style={{ color: "#1B365D" }} />
+              <span>Subscribe to Newsletter</span>
+            </a>
+          </div>
         </div>
 
         <nav className="flex justify-center items-center gap-3 sm:gap-4 mb-6 sm:mb-8" aria-label="Social media links">

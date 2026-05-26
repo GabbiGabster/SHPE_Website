@@ -7,6 +7,7 @@ import {
     Plane,
     FileText,
     X,
+    Utensils,
   } from "lucide-react";
 //   import sponsorshipImage from "figma:asset/bf3fd8f2a6806f6dee31c345da62cbf1dcfad006.png";
   import { useState, useEffect, useRef } from "react";
@@ -83,7 +84,7 @@ import {
       {
         amount: "$25",
         per: "/student",
-        icon: GraduationCap,
+        icon: Utensils,
         title: "Conference Meal",
         description:
           "Covers one meal for a student during the SHPE Conference",
@@ -133,7 +134,7 @@ import {
         nameEnglish: "(Superhero)",
         price: "$250",
         icon: "S",
-        color: "#0070C0",
+        color: "#001F5B",
         benefits: [
           "Announced as sponsor in our newsletter",
           "Invitation to SHPE WashU events",
@@ -144,7 +145,7 @@ import {
         nameEnglish: "(Kin)",
         price: "$500",
         icon: "H",
-        color: "#FD652F",
+        color: "#001F5B",
         benefits: [
           "Announced as sponsor in our newsletter",
           "Invitation to SHPE WashU events",
@@ -156,7 +157,7 @@ import {
         nameEnglish: "(Godparents)",
         price: "$1000",
         icon: "P",
-        color: "#D33A02",
+        color: "#001F5B",
         benefits: [
           "Announced as a sponsor in our events and newsletter",
           "Accessibility to SHPE member resumes",
@@ -222,7 +223,7 @@ import {
               {impactLevels.map((level, index) => (
                 <li key={index} role="listitem" className="flex">
                   <article
-                    className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all hover:scale-105 border-2 focus-within:ring-2 focus-within:ring-[var(--color-primary-blue)] focus-within:ring-offset-2 flex flex-col w-full"
+                    className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border-2 focus-within:ring-2 focus-within:ring-[var(--color-primary-blue)] focus-within:ring-offset-2 flex flex-col w-full"
                     style={{ borderColor: level.color }}
                   >
                     <div

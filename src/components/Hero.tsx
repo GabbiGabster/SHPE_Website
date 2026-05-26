@@ -4,7 +4,7 @@ import washuCampus from "/images/WashUCampus.jpg";
 export function Hero() {
   return (
     <section className="relative" aria-labelledby="hero-heading">
-      <div className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
+      <div className="relative w-full h-[600px] md:h-[700px] pb-12 overflow-hidden">
         <picture>
           <source srcSet={washuCampusWebp} type="image/webp" />
           <img

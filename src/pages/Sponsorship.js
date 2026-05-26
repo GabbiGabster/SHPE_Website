@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { Users, GraduationCap, Briefcase, Home, Plane, FileText, X, } from "lucide-react";
+import { Users, GraduationCap, Briefcase, Home, Plane, FileText, X, Utensils, } from "lucide-react";
 //   import sponsorshipImage from "figma:asset/bf3fd8f2a6806f6dee31c345da62cbf1dcfad006.png";
 import { useState, useEffect, useRef } from "react";
 import { Contact } from "../components/Contact";
@@ -65,7 +65,7 @@ export function Sponsorship() {
         {
             amount: "$25",
             per: "/student",
-            icon: GraduationCap,
+            icon: Utensils,
             title: "Conference Meal",
             description: "Covers one meal for a student during the SHPE Conference",
             color: "#1B365D",
@@ -109,7 +109,7 @@ export function Sponsorship() {
             nameEnglish: "(Superhero)",
             price: "$250",
             icon: "S",
-            color: "#E84E1B",
+            color: "#0070C0",
             benefits: [
                 "Announced as sponsor in our newsletter",
                 "Invitation to SHPE WashU events",
@@ -120,7 +120,7 @@ export function Sponsorship() {
             nameEnglish: "(Kin)",
             price: "$500",
             icon: "H",
-            color: "#E84E1B",
+            color: "#FD652F",
             benefits: [
                 "Announced as sponsor in our newsletter",
                 "Invitation to SHPE WashU events",
@@ -132,7 +132,7 @@ export function Sponsorship() {
             nameEnglish: "(Godparents)",
             price: "$1000",
             icon: "P",
-            color: "#E84E1B",
+            color: "#D33A02",
             benefits: [
                 "Announced as a sponsor in our events and newsletter",
                 "Accessibility to SHPE member resumes",
@@ -145,7 +145,7 @@ export function Sponsorship() {
             nameEnglish: "(Stars)",
             price: "$1500",
             icon: "E",
-            color: "#F5A623",
+            color: "#FFA017",
             benefits: [
                 "Announced as an investor in all events, newsletters, and social media",
                 "Accessibility to SHPE member resumes",
@@ -155,7 +155,7 @@ export function Sponsorship() {
             ],
         },
     ];
-    return (_jsxs("main", { className: "min-h-screen bg-white", children: [_jsx(SEOHead, { title: "Sponsorship Opportunities - WashU SHPE", description: "Partner with WashU SHPE to empower Hispanic STEM students. Explore sponsorship tiers and see how your contribution funds workshops, conferences, and mentorship programs. Make a difference today!", keywords: "SHPE sponsorship, corporate partnership, Hispanic engineering sponsorship, STEM funding, SHPE donate, WashU corporate sponsors, engineering scholarships" }), _jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16", children: [_jsxs("header", { className: "text-center mb-12 sm:mb-16 px-2", children: [_jsx("h1", { className: "text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 text-[var(--color-primary-blue)] leading-tight", children: "Explore Sponsorship Opportunities" }), _jsx("p", { className: "text-2xl sm:text-3xl mb-4 sm:mb-6 text-[var(--color-primary-orange)]", children: "Partner With Us" }), _jsx("p", { className: "text-base sm:text-lg lg:text-xl text-[var(--color-text-secondary)] max-w-4xl mx-auto mb-3 sm:mb-4", children: "WashU SHPE collaborates with corporate partners to bring impactful workshops, mentorship, scholarships, and career opportunities to our members." }), _jsx("p", { className: "text-base sm:text-lg lg:text-xl max-w-3xl mx-auto text-[var(--color-primary-blue)]", children: "Thank you to all our sponsors for your generous support!" })] }), _jsxs("section", { className: "mb-12 sm:mb-20", "aria-labelledby": "impact-heading", children: [_jsx("h2", { id: "impact-heading", className: "text-2xl sm:text-3xl lg:text-4xl text-center mb-3 sm:mb-4 text-[var(--color-primary-blue)] px-2", children: "How Your Contribution Makes an Impact" }), _jsx("p", { className: "text-center text-sm sm:text-base text-[var(--color-text-tertiary)] mb-8 sm:mb-12 max-w-3xl mx-auto px-2", children: "Every dollar invested in our students creates lasting change. Here's how your sponsorship directly supports student success:" }), _jsx("ul", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 list-none", role: "list", children: impactLevels.map((level, index) => (_jsx("li", { role: "listitem", className: "flex", children: _jsxs("article", { className: "bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all hover:scale-105 border-2 focus-within:ring-2 focus-within:ring-[var(--color-primary-blue)] focus-within:ring-offset-2 flex flex-col w-full", style: { borderColor: level.color }, children: [_jsx("div", { className: "w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center flex-shrink-0", style: {
+    return (_jsxs("main", { className: "min-h-screen bg-white", children: [_jsx(SEOHead, { title: "Sponsorship Opportunities - WashU SHPE", description: "Partner with WashU SHPE to empower Hispanic STEM students. Explore sponsorship tiers and see how your contribution funds workshops, conferences, and mentorship programs. Make a difference today!", keywords: "SHPE sponsorship, corporate partnership, Hispanic engineering sponsorship, STEM funding, SHPE donate, WashU corporate sponsors, engineering scholarships" }), _jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16", children: [_jsxs("header", { className: "text-center mb-12 sm:mb-16 px-2", children: [_jsx("h1", { className: "text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 text-[var(--color-primary-blue)] leading-tight", children: "Explore Sponsorship Opportunities" }), _jsx("p", { className: "text-2xl sm:text-3xl mb-4 sm:mb-6 text-[var(--color-primary-orange)]", children: "Partner With Us" }), _jsx("p", { className: "text-base sm:text-lg lg:text-xl text-[var(--color-text-secondary)] max-w-4xl mx-auto mb-3 sm:mb-4", children: "WashU SHPE collaborates with corporate partners to bring impactful workshops, mentorship, scholarships, and career opportunities to our members." }), _jsx("p", { className: "text-base sm:text-lg lg:text-xl max-w-3xl mx-auto text-[var(--color-primary-blue)]", children: "Thank you to all our sponsors for your generous support!" })] }), _jsxs("section", { className: "mb-12 sm:mb-20", "aria-labelledby": "impact-heading", children: [_jsx("h2", { id: "impact-heading", className: "text-2xl sm:text-3xl lg:text-4xl text-center mb-3 sm:mb-4 text-[var(--color-primary-blue)] px-2", children: "How Your Contribution Makes an Impact" }), _jsx("p", { className: "text-center text-sm sm:text-base text-[var(--color-text-tertiary)] mb-8 sm:mb-12 max-w-3xl mx-auto px-2", children: "Every dollar invested in our students creates lasting change. Here's how your sponsorship directly supports student success:" }), _jsx("ul", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 list-none", role: "list", children: impactLevels.map((level, index) => (_jsx("li", { role: "listitem", className: "flex", children: _jsxs("article", { className: "bg-white rounded-2xl p-6 sm:p-8 shadow-lg border-2 focus-within:ring-2 focus-within:ring-[var(--color-primary-blue)] focus-within:ring-offset-2 flex flex-col w-full", style: { borderColor: level.color }, children: [_jsx("div", { className: "w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center flex-shrink-0", style: {
                                                     backgroundColor: `${level.color}15`,
                                                 }, "aria-hidden": "true", children: _jsx(level.icon, { className: "w-6 h-6 sm:w-8 sm:h-8", style: { color: level.color }, "aria-hidden": "true" }) }), _jsxs("div", { className: "text-center flex-grow flex flex-col", children: [_jsxs("div", { className: "text-3xl sm:text-4xl mb-1 font-semibold", style: { color: level.color }, children: [level.amount, level.per && (_jsx("span", { className: "text-lg sm:text-2xl text-gray-600", children: level.per }))] }), _jsx("h3", { className: "text-lg sm:text-xl mb-2 sm:mb-3 text-[var(--color-primary-blue)]", children: level.title }), _jsx("p", { className: "text-sm sm:text-base text-gray-700 flex-grow", children: level.description })] })] }) }, index))) })] }), _jsxs("section", { className: "mb-12 sm:mb-20", "aria-labelledby": "tiers-heading", children: [_jsx("h2", { id: "tiers-heading", className: "text-2xl sm:text-3xl lg:text-4xl text-center mb-8 sm:mb-12 text-[var(--color-primary-blue)] px-2", children: "Sponsorship Tiers" }), _jsx("ul", { className: "grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 list-none", role: "list", children: sponsorshipTiers.map((tier, index) => (_jsx("li", { role: "listitem", className: "flex", children: _jsxs("article", { className: "bg-white rounded-2xl shadow-xl p-6 sm:p-8 border-t-8 hover:shadow-2xl transition-all focus-within:ring-2 focus-within:ring-[var(--color-primary-blue)] focus-within:ring-offset-2 flex flex-col w-full", style: { borderTopColor: tier.color }, children: [_jsxs("div", { className: "flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 flex-shrink-0", children: [_jsx("div", { className: "w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-white text-2xl sm:text-3xl font-bold flex-shrink-0", style: { backgroundColor: tier.color }, "aria-hidden": "true", children: tier.icon }), _jsxs("div", { children: [_jsxs("h3", { className: "text-xl sm:text-2xl", style: {
                                                                     color: tier.color === "#F5A623"

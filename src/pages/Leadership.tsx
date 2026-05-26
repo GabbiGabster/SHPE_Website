@@ -9,7 +9,7 @@ interface Leader {
   name: string;
   major: string;
   image?: string;
-  email: string;
+  email?: string;
   linkedin?: string;
 }
 
@@ -63,13 +63,15 @@ export function Leadership() {
 
                 {/* Hover Overlay with Contact Buttons */}
                 <div className="absolute inset-0 bg-[#1B365D] bg-opacity-95 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 sm:gap-4">
-                  <a
-                    href={`mailto:${leader.email}`}
-                    className="bg-white rounded-full p-3 sm:p-4 hover:scale-110 active:scale-95 transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white shadow-lg min-w-[44px] min-h-[44px] flex items-center justify-center"
-                    aria-label={`Email ${leader.name}`}
-                  >
-                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-[#1B365D]" aria-hidden="true" />
-                  </a>
+                  {leader.email && (
+                    <a
+                      href={`mailto:${leader.email}`}
+                      className="bg-white rounded-full p-3 sm:p-4 hover:scale-110 active:scale-95 transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white shadow-lg min-w-[44px] min-h-[44px] flex items-center justify-center"
+                      aria-label={`Email ${leader.name}`}
+                    >
+                      <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-[#1B365D]" aria-hidden="true" />
+                    </a>
+                  )}
                   {leader.linkedin && (
                     <a
                       href={leader.linkedin}

@@ -1,5 +1,6 @@
-import { Slack, Linkedin, Instagram, ExternalLink } from "lucide-react";
+import { Slack, Linkedin, Instagram, ExternalLink, MessageCircle, Users, Target, Globe } from "lucide-react";
 import { SEOHead } from "../components/SEOHead";
+import { Contact } from "../components/Contact";
 
 export function GetPluggedIn() {
   const platforms = [
@@ -30,9 +31,19 @@ export function GetPluggedIn() {
       description: "See what we're up to! Follow our Instagram for event photos, stories, and behind-the-scenes content from the SHPE familia.",
       action: "Follow on Instagram",
       url: "https://www.instagram.com/washushpe/",
-      color: "#1B365D",
+      color: "#0070C0",
       bgColor: "#E8ECF2"
     }
+    {
+      icon: Globe,
+      name: "WUGO",
+      title: "Find Us on WUGO",
+      description: "See our official WashU student organization listing on WUGO and register to become a member",
+      action: "Open WUGO",
+      url: "https://wustl.presence.io/organization/society-of-hispanic-professional-engineers",
+      color: "#1B365D",
+      bgColor: "#E8ECF2"
+    },
   ];
 
   return (
@@ -112,7 +123,7 @@ export function GetPluggedIn() {
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 list-none" role="list">
             <li className="text-center" role="listitem">
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-[#FEF2EE]" aria-hidden="true">
-                <span className="text-2xl sm:text-3xl" style={{ color: '#E84E1B' }} aria-hidden="true">💬</span>
+                <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8" style={{ color: '#E84E1B' }} aria-hidden="true" />
               </div>
               <h3 className="text-lg sm:text-xl mb-2 text-[var(--color-primary-blue)]">Stay Connected</h3>
               <p className="text-sm sm:text-base text-[var(--color-text-tertiary)]">
@@ -122,7 +133,7 @@ export function GetPluggedIn() {
             
             <li className="text-center" role="listitem">
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-[#E8F4F8]" aria-hidden="true">
-                <span className="text-2xl sm:text-3xl" style={{ color: '#5B9BD5' }} aria-hidden="true">🤝</span>
+                <Users className="w-6 h-6 sm:w-8 sm:h-8" style={{ color: '#5B9BD5' }} aria-hidden="true" />
               </div>
               <h3 className="text-lg sm:text-xl mb-2 text-[var(--color-primary-blue)]">Build Your Network</h3>
               <p className="text-sm sm:text-base text-[var(--color-text-tertiary)]">
@@ -132,7 +143,7 @@ export function GetPluggedIn() {
             
             <li className="text-center" role="listitem">
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center bg-[#E8ECF2]" aria-hidden="true">
-                <span className="text-2xl sm:text-3xl" style={{ color: '#1B365D' }} aria-hidden="true">🎯</span>
+                <Target className="w-6 h-6 sm:w-8 sm:h-8" style={{ color: '#1B365D' }} aria-hidden="true" />
               </div>
               <h3 className="text-lg sm:text-xl mb-2 text-[var(--color-primary-blue)]">Access Resources</h3>
               <p className="text-sm sm:text-base text-[var(--color-text-tertiary)]">
@@ -142,6 +153,7 @@ export function GetPluggedIn() {
           </ul>
         </section>
       </div>
+      <Contact />
     </main>
   );
 }

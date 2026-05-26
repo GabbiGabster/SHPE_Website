@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title ng-bind="$root.pageTitle">Involve</title>
+    <link rel="icon" href="https://cdn.presence.io/assets/involve.ico?v=3.3.1" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://cdn.presence.io/assets/involve.ico?v=3.3.1" type="image/x-icon" />
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <meta property="og:title" content="Washington University in St. Louis" />
+    <meta property="og:site_name" content="WUGO | Washington University in St. Louis" /> 
+    <meta property="og:url" content="https://wustl.presence.io/" />
+    <meta property="og:description" />
+    <meta property="og:image" content="https://checkimhere.blob.core.windows.net/campusphotos/wustl/cover.png?sv=2025-01-05&amp;st=2026-05-26T18%3A04%3A22Z&amp;se=2026-05-26T18%3A19%3A22Z&amp;sr=b&amp;sp=r&amp;sig=ndcrwG9vHGt9yE5B4y9J4HNbXh1GHLpgJnRs846RUqc%3D" />
+    <meta property="fb:app_id" content="425894090870008" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://wustl.presence.io/">
+    <meta name="twitter:creator" content="@checkimhere">
+    <meta name="twitter:title" content="Washington University in St. Louis">
+    <meta name="twitter:description">
+    <meta name="twitter:image" content="https://checkimhere.blob.core.windows.net/campusphotos/wustl/cover.png?sv=2025-01-05&amp;st=2026-05-26T18%3A04%3A22Z&amp;se=2026-05-26T18%3A19%3A22Z&amp;sr=b&amp;sp=r&amp;sig=ndcrwG9vHGt9yE5B4y9J4HNbXh1GHLpgJnRs846RUqc%3D">
+    <div id="fb-root"></div>
+    <style>
+        /* splash screen */
+        .zspinner {
+            width: 40px;
+            height: 40px;
+            background-color: #ffffff;
+            margin: calc(50% - 200px) auto 0 auto;
+            border-radius: 100%;
+            -webkit-animation: sk-scaleout 2.0s infinite ease-in-out;
+            animation: sk-scaleout 2.0s infinite ease-in-out;
+        }
+        .zspinner-x2 {
+            width: 80px;
+            height: 80px;
+            background-color: #ffffff;
+            margin: calc(50% - 200px) auto 0 auto;
+            border-radius: 100%;
+            -webkit-animation: sk-scaleout 2.0s infinite ease-in-out;
+            animation: sk-scaleout 2.0s infinite ease-in-out;
+        }
+        @-webkit-keyframes sk-scaleout {
+            0% {
+                -webkit-transform: scale(0)
+            }
+            100% {
+                -webkit-transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+        @keyframes sk-scaleout {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            100% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+        .loading-text {
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            font-weight: 100;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            width: 100%;
+            height: 50px;
+            margin: 5% auto 0 auto;
+        }
+            .loading-text:after {
+                content: "Warming Up";
+            }
+        @keyframes changeLetter {
+            0% {
+                content: "Warming Up";
+                color: #fff;
+            }
+            20% {
+                content: "Warming Up";
+                color: #fff;
+            }
+            30% {
+                color: #463344;
+            }
+            40% {
+                content: "Involving Students";
+                color: #fff;
+            }
+            50% {
+                color: #463344;
+            }
+            60% {
+                content: "Calculating Odds";
+                color: #fff;
+            }
+            70% {
+                color: #463344;
+            }
+            75% {
+                content: "Aligning Planets";
+                color: #fff;
+            }
+            80% {
+                color: #463344;
+            }
+            85% {
+                content: "Tasting Rainbows";
+                color: #fff;
+            }
+            90% {
+                color: #463344;
+            }
+            100% {
+                content: "To be honest, just updating a few things..";
+                color: #fff;
+            }
+        }
+        .loading-text:after {
+            animation: changeLetter 35s linear infinite;
+        }
+        #loadingsplash {
+            background: #463344;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            z-index: 999999999;
+        }
+        body.rebrand,
+        body.rebrand .nav-bar {
+            margin-top: 40px;
+        }
+        body:not(.rebrand) .rebrand {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.presence.io/assets/dist/738EF1077A397A208F9DA20BE84B2E26/s.css">
+    <!--<link rel="stylesheet" href="https://az795308.vo.msecnd.net/assets/dist/signature-pad.css">-->
+    <script id="socialPlaceholder"></script>
+    <script>
+        window['_fs_debug'] = false;
+        window['_fs_host'] = 'fullstory.com';
+        window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
+        window['_fs_org'] = 'EVPKD';
+        window['_fs_namespace'] = 'FS';
+        (function (m, n, e, t, l, o, g, y) {
+            if (e in m) { if (m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); } return; }
+            g = m[e] = function (a, b, s) { g.q ? g.q.push([a, b, s]) : g._api(a, b, s); }; g.q = [];
+            o = n.createElement(t); o.async = 1; o.crossOrigin = 'anonymous'; o.src = 'https://' + _fs_script;
+            y = n.getElementsByTagName(t)[0]; y.parentNode.insertBefore(o, y);
+            g.identify = function (i, v, s) { g(l, { uid: i }, s); if (v) g(l, v, s) }; g.setUserVars = function (v, s) { g(l, v, s) }; g.event = function (i, v, s) { g('event', { n: i, p: v }, s) };
+            g.anonymize = function () { g.identify(!!0) };
+            g.shutdown = function () { g("rec", !1) }; g.restart = function () { g("rec", !0) };
+            g.log = function (a, b) { g("log", [a, b]) };
+            g.consent = function (a) { g("consent", !arguments.length || a) };
+            g.identifyAccount = function (i, v) { o = 'account'; v = v || {}; v.acctId = i; g(o, v) };
+            g.clearUserCookie = function () { };
+            g.setVars = function (n, p) { g('setVars', [n, p]); };
+            g._w = {}; y = 'XMLHttpRequest'; g._w[y] = m[y]; y = 'fetch'; g._w[y] = m[y];
+            if (m[y]) m[y] = function () { return g._w[y].apply(this, arguments) };
+            g._v = "1.3.0";
+        })(window, document, window['_fs_namespace'], 'script', 'user');
+        let metadata = {
+            authenticated_bool: false,
+            campusUri_str: 'wustl',
+            product_str: 'presence'
+        }
+        let id = metadata.authenticated_bool ? '' : 'anonymous-presence-user';
+        if (metadata.authenticated_bool) {
+            metadata.displayName = ' ';
+            metadata.email = '';
+            metadata.firstName_str = '';
+            metadata.lastName_str = '';
+            metadata.role_structure_types_str = '';
+        }
+        FS.identify(id, metadata);
+    </script>
+    <style>
+        .ta-hidden-input {
+            display: none !important;
+        }
+    </style>
+    <!-- DevOps build & release test: 0 04/11/2019 3:08 PM -->
+</head>
+<body ng-class="{ 'iFrame': $rootScope.isIFrame}">
+    <div id="loadingsplash">
+        <div class="zspinner"></div>
+        <div class="loading-text"></div>
+    </div>
+    <div class="rebrand"
+         style="
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         width: 100%;
+         height: 40px;
+         text-align: center;
+         background: #463243;
+         font-weight: 100;
+         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+         color: #fff;
+         line-height: 40px;
+         z-index: 9999999;">
+    </div>
+    <cih-student id="pmain" data-p="Prod" style="display:none;">
+        
+    </cih-student>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.presence.io/assets/dist/oidc/1-2-2/oidc-client.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script async defer src="https://www.instagram.com/embed.js"></script>
+    <script>
+        window.px = {
+            authorityUrl: 'https://auth.presence.io',
+            platformAuthorityUrl: '',
+            useLegacyAuth: 'True',
+            clientId: ''
+        }
+    </script>
+    <script src="https://cdn.presence.io/assets/dist/E6A77EE9184FB436D0A01D4BD68AB5E0/l.js"></script><script src="https://cdn.presence.io/assets/dist/02FCEFDB56647496191DDDDFC4307DAE/s.js"></script>
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        var rf = getParameterByName('rf');
+        if (rf === "rebrand") {
+            var body = document.getElementsByTagName("body")[0];
+            body.className += " rebrand";
+        }
+    </script>
+    <script>
+        $("body").on("click", ".tab-nav a", function () {
+            $(this).blur();
+        });
+    </script>
+    <script>
+        // Fix tab-navigation ADA highlight/focus
+        $("body").on("click", ".tab-nav a", function () {
+            $(this).blur();
+        });
+        // remove focus-box (ADA)
+        $("body").on("click", ".unfocus", function () {
+            $(this).blur();
+        });
+    </script>
+    <script id="prodPerfect">
+        !function (name, path, ctx) {
+            var latest, prev = name !== 'Keen' && window.Keen ? window.Keen : false; ctx[name] = ctx[name] || { ready: function (fn) { var h = document.getElementsByTagName('head')[0], s = document.createElement('script'), w = window, loaded; s.onload = s.onreadystatechange = function () { if ((s.readyState && !(/^c|loade/.test(s.readyState))) || loaded) { return } s.onload = s.onreadystatechange = null; loaded = 1; latest = w.Keen; if (prev) { w.Keen = prev } else { try { delete w.Keen } catch (e) { w.Keen = void 0 } } ctx[name] = latest; ctx[name].ready(fn) }; s.async = 1; s.src = path; h.appendChild(s) } }
+        }('ProdPerfectKeen', 'https://presence.trackinglibrary.prodperfect.com/keen-tracking.min.js', this);
+        ProdPerfectKeen.ready(function () {
+            var client = new ProdPerfectKeen({
+                projectId: "GX0REvseTuatmwJWLzVucXBh",
+                writeKey: "KJCZ9F42P8J4ZZ3R2VM75V2UEAL6H54398V2TE2MY9RMICQSGQPI1FAJFUESG894G4DUF8OXNIGQORGMLKDWDRI335QBWBVNMFJERUE858YRBITJYKHGHIGMQRA71CYU7G9TDAQV2PSFUBQLGL4647SCZ49ZSNI3OQZOEK4YRG5C64DW2BMCVVXQHVV7HF0G",
+                requestType: "beacon",
+                host: "presence.datapipe.prodperfect.com/v1",
+            });
+            // user metadata
+            let userId = null;
+            let userRole = null;
+            if (false) {
+                userId = '';
+                userRole = true ? 'student' : 'admin';
+            }
+            client.extendEvents({
+                visitor: {
+                    user_id: userId,
+                    user_role: userRole
+                },
+            });
+            var options = {
+                ignoreDisabledFormFields: false,
+                recordClicks: true,
+                recordFormSubmits: true,
+                recordInputChanges: true,
+                recordPageViews: true,
+                recordPageUnloads: true,
+                recordScrollState: true,
+            };
+            client.initAutoTracking(options);
+        });
+    </script>
+</body>
+</html>
