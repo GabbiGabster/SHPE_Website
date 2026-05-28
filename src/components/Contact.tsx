@@ -1,10 +1,6 @@
-import { useState } from "react";
 import { Mail, Instagram, Linkedin, Link2 } from "lucide-react";
 
 export function Contact() {
-  const [newsletterEmail, setNewsletterEmail] = useState("");
-  const [newsletterStatus, setNewsletterStatus] = useState<"" | "error">("");
-
   const socialLinks = [
     {
       icon: Instagram,
@@ -34,6 +30,15 @@ export function Contact() {
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 px-2">
             Have questions? We'd love to hear from you!
           </p>
+          <a
+            href="mailto:shpe@wustl.edu"
+            className="inline-flex items-center justify-center gap-2 sm:gap-3 rounded-lg px-6 sm:px-8 py-3 sm:py-4 transition-all hover:scale-105 shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-semibold text-sm sm:text-base min-h-[44px]"
+            style={{ backgroundColor: "#E84E1B", color: "#FFFFFF" }}
+            aria-label="Send email to shpe@wustl.edu"
+          >
+            <Mail className="w-5 h-5 flex-shrink-0" aria-hidden="true" style={{ color: "#FFFFFF" }} />
+            <span className="break-all sm:break-normal">shpe@wustl.edu</span>
+          </a>
         </div>
 
         <nav className="flex justify-center items-center gap-3 sm:gap-4 mb-6 sm:mb-8" aria-label="Social media links">

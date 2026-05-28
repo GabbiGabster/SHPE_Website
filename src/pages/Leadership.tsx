@@ -15,6 +15,10 @@ interface Leader {
 
 export function Leadership() {
   const leaders = leadersData as Leader[];
+  const getMailtoHref = (email: string) => `mailto:${email.trim()}`;
+  const openEmailClient = (email: string) => {
+    window.location.href = getMailtoHref(email);
+  };
 
   return (
     <main className="min-h-screen bg-white">
@@ -62,10 +66,16 @@ export function Leadership() {
                 </div>
 
                 {/* Hover Overlay with Contact Buttons */}
-                <div className="absolute inset-0 bg-[#1B365D] bg-opacity-95 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 sm:gap-4">
+                <div className="absolute inset-0 bg-[#1B365D] bg-opacity-95 opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-300 flex items-center justify-center gap-3 sm:gap-4">
                   {leader.email && (
                     <a
-                      href={`mailto:${leader.email}`}
+                      href={getMailtoHref(leader.email)}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        if (leader.email) {
+                          openEmailClient(leader.email);
+                        }
+                      }}
                       className="bg-white rounded-full p-3 sm:p-4 hover:scale-110 active:scale-95 transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white shadow-lg min-w-[44px] min-h-[44px] flex items-center justify-center"
                       aria-label={`Email ${leader.name}`}
                     >
@@ -88,13 +98,13 @@ export function Leadership() {
 
               {/* Card Content */}
               <div className="p-5 sm:p-6 flex-grow">
-                <h2 className="text-base sm:text-lg font-semibold text-[#E84E1B] mb-1">
+                <h2 className="text-base sm:text-lg font-semibold text-[#A83711] mb-1">
                   {leader.position}
                 </h2>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#1B365D] mb-1 sm:mb-2">
                   {leader.name}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600">{leader.major}</p>
+                <p className="text-sm sm:text-base text-gray-700">{leader.major}</p>
               </div>
             </article>
           ))}
