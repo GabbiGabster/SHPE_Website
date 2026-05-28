@@ -1,30 +1,6 @@
 [
   {
     "position": "President",
-    "name": "Diego Gonzalez",
-    "major": "Computer Science",
-    "image": "images/leaders/diego-gonzalez.jpeg",
-    "email": "d.gonzalez@wustl.edu",
-    "linkedin": "https://www.linkedin.com/in/diego-gonzalezz/"
-  },
-  {
-    "position": "Vice-President",
-    "name": "Gabriella Arguello",
-    "major": "Computer Science",
-    "image": "images/leaders/gabriella-arguello.jpeg",
-    "email": "a.gabbi@wustl.edu",
-    "linkedin": "https://www.linkedin.com/in/gabbiarguello/"
-  },
-  {
-    "position": "External Representative",
-    "name": "Miguel Lopez",
-    "major": "Mechanical Engineering",
-    "image": "images/leaders/miguel-lopez.jpeg",
-    "email": "lmiguel@wustl.edu",
-    "linkedin": "https://www.linkedin.com/in/miguel-lopez100/"
-  },
-  {
-    "position": "Internal Representative",
     "name": "Melita Ocampo",
     "major": "Computer Science",
     "image": "images/leaders/melita-ocampo.jpeg",
@@ -32,7 +8,23 @@
     "linkedin": "https://www.linkedin.com/in/melitao/"
   },
   {
-    "position": "Secretary",
+    "position": "Vice-President",
+    "name": "Diego Gonzalez",
+    "major": "Computer Science",
+    "image": "images/leaders/diego-gonzalez.jpeg",
+    "email": "d.gonzalez@wustl.edu",
+    "linkedin": "https://www.linkedin.com/in/diego-gonzalezz/"
+  },
+  {
+    "position": "External Representative",
+    "name": "Gabriella Arguello",
+    "major": "Computer Science",
+    "image": "images/leaders/gabriella-arguello.jpeg",
+    "email": "a.gabbi@wustl.edu",
+    "linkedin": "https://www.linkedin.com/in/gabbiarguello/"
+  },
+  {
+    "position": "Internal Representative",
     "name": "Nadia Ahmed",
     "major": "Math + Computer Science",
     "image": "images/leaders/nadia-ahmed.jpeg",
@@ -40,15 +32,15 @@
     "linkedin": "https://www.linkedin.com/in/nadiaahmed06/"
   },
   {
-    "position": "Treasurer",
-    "name": "Anette Martinez Vazquez",
-    "major": "Mechanical Engineering",
-    "image": "images/leaders/anette-martinez-vazquez.jpeg",
-    "email": "",
-    "linkedin": "https://www.linkedin.com/in/anett-martinez-vazquez/"
+    "position": "Secretary",
+    "name": "Anthony Vidal Reyes",
+    "major": "Environmental Engineering",
+    "image": "images/leaders/anthony-vidal.jpeg",
+    "email": "a.vidal@wustl.edu",
+    "linkedin": "https://www.linkedin.com/in/anthony-vidal-reyes-264062192/"
   },
   {
-    "position": "Community Service Chair",
+    "position": "Treasurer",
     "name": "Angela Delgado",
     "major": "Mechanical Engineering",
     "image": "images/leaders/angela-delgado.jpeg",
@@ -56,19 +48,27 @@
     "linkedin": "https://www.linkedin.com/in/angela-del7/"
   },
   {
-    "position": "Event Coordinator",
-    "name": "Diana Cardenas-Jara",
-    "major": "Computer Science + Political Science",
-    "image": "images/leaders/diana-cardenas-jara.jpeg",
-    "email": "cardenas-jara@wustl.edu",
-    "linkedin": "https://www.linkedin.com/in/diana-cardenas-jara/"
+    "position": "Community Service Chair",
+    "name": "Diego Perez Pijuan",
+    "major": "Mechanical Engineering",
+    "image": "images/leaders/diego-perez.png",
+    "email": "d.s.perez@wustl.edu",
+    "linkedin": "https://www.linkedin.com/in/diego-perez-pijuan-425634244/"
   },
   {
-    "position": "First Year Representative",
+    "position": "Event Coordinator",
     "name": "Tobias Montilla",
     "major": "Mechanical Engineering",
     "image": "images/leaders/tobias-montilla.jpeg",
     "email": "montilla@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/tobiasmontilla"
+  },
+  {
+    "position": "First Year Representative",
+    "name": "TBD",
+    "major": "???",
+    "image": "",
+    "email": "",
+    "linkedin": ""
   }
 ]
